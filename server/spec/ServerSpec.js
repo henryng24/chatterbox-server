@@ -56,8 +56,8 @@ describe('Node Server Request Listener Function', function() {
     expect(parsedBody.results).to.be.an('array');
     expect(res._ended).to.equal(true);
   });
-
-  it('Should accept posts to /classes/room', function() {
+// getting the next test to pass helps us pass step 3
+  it('Should accept posts to /classes/room1', function() {
     var stubMsg = {
       username: 'Jono',
       message: 'Do my bidding!'
