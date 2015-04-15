@@ -44,6 +44,7 @@ describe('server', function() {
 
     request(requestParams, function(error, response, body) {
       expect(response.statusCode).to.equal(201);
+      
       done();
     });
   });
@@ -57,6 +58,7 @@ describe('server', function() {
     };
 
     request(requestParams, function(error, response, body) {
+      console.log(this._postData);
       // Now if we request the log, that message we posted should be there:
       request('http://127.0.0.1:3000/classes/messages', function(error, response, body) {
           var messages = JSON.parse(body).results;
